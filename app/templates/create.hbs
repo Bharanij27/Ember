@@ -1,0 +1,17 @@
+<div class="loginbody">
+<div class="loginform">
+    <h1><em>Create Your Post</em></h1>
+    <div class="textbox">
+        Title Of Your Post<br>
+        <Input type="text" id="title" @value={{title}} placeholder="Title"/>
+    </div>
+
+    <div class="textbox">
+        Content Of Your Post<br>
+        <Textarea id="content" @value = {{content}} cols = "40" rows = "10" placeholder="Your Content goes here..."/>
+    </div>
+
+    <button class="lobtn" type="button" {{action "submit"}} disabled={{isdisable}}>Submit</button>
+</div>
+</div>
+{{outlet}}

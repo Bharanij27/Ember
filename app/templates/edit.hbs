@@ -1,0 +1,27 @@
+<div class="loginbody">
+<div class="loginform">
+    <h1><em>Edit Your Details</em></h1>
+    <div class="textbox">
+        <i>UserName:</i><br>
+        <Input type="text" id="uname" @value={{name}} placeholder="User Name"/>
+    </div>
+
+    <div class="textbox">
+        <i>Password:</i><br>
+        <Input type="password" id="upass" @value={{password}} placeholder="Password"/>
+    </div>
+    
+    <div class="textbox">
+        <i>Email</i><br>
+        <Input type="text" id="ueid" @value={{email}} placeholder="Email Id"/>
+    </div>
+
+    <div class="textbox">
+        <i>Contact</i><br>
+        <Input type="text" id="uno" @value={{contact}} placeholder="Contact No"/>
+    </div>
+
+    <button class="lobtn" id="btn" {{action 'save'}} >Save</button>
+</div>
+</div>
+{{outlet}}

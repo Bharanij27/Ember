@@ -1,0 +1,32 @@
+<div class="links" style="line-height: 100pt;
+  float: right;">
+    <LinkTo @route="edit" class="menu-edit">
+      <b>Edit</b>
+    </LinkTo>
+</div>
+
+<div class="links" style="padding: 0 20px; line-height: 100pt;
+  float: right;">
+    <LinkTo @route="friend" class="menu-friend">
+      <b>Friends&Request</b>
+    </LinkTo>
+</div>
+
+<div class="links" style="padding: 0 20px; line-height: 100pt;
+  float: right;">
+    <LinkTo @route="group" class="menu-group">
+      <b>Groups</b>
+    </LinkTo>
+</div>
+
+<div class="loginbody">
+    <div class="loginform" style="left: 20%;">
+    <h1><em>{{model.dispName}}</em></h1>
+    <div class="textbox">
+        <i>UserName:{{model.name}}</i><br>
+        <i>Email:{{model.email}}</i><br>
+        <i>Contact:{{model.contact}}</i><br>
+    </div>
+</div>
+</div>
+{{outlet}}

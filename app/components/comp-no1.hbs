@@ -1,0 +1,10 @@
+<div class="comp1">
+{{#each available as |list| }}
+    <h3>
+        <div  class={{list}} {{action "pass" list}}>
+            <li><i>{{list}}</i></li>
+        </div> 
+    </h3>
+{{/each}}
+</div>
+{{yield}}

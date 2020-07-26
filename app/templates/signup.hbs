@@ -1,0 +1,33 @@
+<div class="loginbody">
+<div class="loginform">
+    <h1><em>Sign Up</em></h1>
+    <div class="textbox">
+        <i class="far fa-user" aria-hidden="true"></i>
+       <Input type="text" id="uname" @value={{this.uname}} placeholder="User Name"/>
+    </div>
+
+    <div class="textbox">
+        <i class="far fa-user" aria-hidden="true"></i>
+       <Input type="text" id="udisp" @value={{this.dispName}} placeholder="Name to be displayed to others"/>
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-lock" aria-hidden="true"></i>
+       <Input type="password" id="upass" @value={{this.upass}} placeholder="Password"/>
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-lock" aria-hidden="true"></i>
+       <Input type="text" id="ueid" @value={{this.ueid}} placeholder="Email Id"/>
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-lock" aria-hidden="true"></i>
+       <Input type="text" id="uno" @value={{this.uno}} placeholder="Contact No"/>
+    </div>
+
+    <button class="lobtn" type="button" {{action 'signup'}} >Sign-Up</button>
+
+</div>
+</div>
+{{outlet}}

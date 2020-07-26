@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="menu">
+    <LinkTo @route="page1">
+      <h1>
+        <em>Demo</em>
+      </h1>
+    </LinkTo>
+    
+{{#if this.demo.islogged}}
+<div class="links">
+  <LinkTo @route="create" class="menu-create">
+      <b>Create Post</b>
+  </LinkTo>
+
+    <LinkTo @route="shared" class="menu-shared">
+      <b>Shared To Me</b>
+    </LinkTo>
+
+</div>
+
+<div class="links-right">
+
+    <LinkTo @route="account" class="menu-account">
+      <b>Account</b>
+    </LinkTo>
+
+    <LinkTo @route="login" class="menu-logout">
+      <b>LogOut</b>
+    </LinkTo>
+</div>
+
+
+{{else}}
+
+<div class="links">
+    <LinkTo @route="login" class="menu-login">
+      <b>Login</b>
+    </LinkTo>
+</div>
+
+<div class="links">
+    <LinkTo @route="signup" class="menu-signup">
+      <b>SignUp</b>
+    </LinkTo>
+</div>
+
+{{/if}}
+  </div>
+</div>
+{{outlet}}

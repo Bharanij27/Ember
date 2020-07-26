@@ -1,0 +1,23 @@
+<h3>Create Group</h3>
+<div class="textbox" style="width:35%">
+    <Input id="gname" type="text" @value={{gname}} placeholder="Enter Group name to Create "/>
+</div>
+<button class="lobtn" id="create" style="width: 10%;"{{action 'create'}} disabled={{isdisabled}}>Create</button> 
+<hr><br>
+
+{{#if isclicked}}
+    <div class="textbox" style="width:35%">
+        <Input id="uname" type="text" @value={{uname}} placeholder="Enter User name to Add to {{group_name}}"/>
+    </div>
+    <button class="lobtn" id="add" style="width: 8%;"{{action 'add'}} disabled={{isname}}>Add</button> 
+{{/if}}
+
+<h3>Your Groups: </h3>
+{{#each model as |group|}}
+    {{group.name}} 
+    <button class="lobtn" id="add{{group.name}}" style="width: 10%;" type="button" {{action 'add_user' group.name}} >Add</button>
+    <br>
+{{else}}
+    No Group
+{{/each}}
+{{outlet}}

@@ -1,0 +1,15 @@
+<div class="comp2">
+{{#each model as |list| }}
+  <h4>Blog By:{{list.author_name}}</h4>
+  <h5>Title:{{list.title}}</h5>
+  <p>Content:
+    <div  class="listOfUser{{list.id}}"{{action "pass" list}}>
+        {{list.content}}
+    </div>
+  </p>
+  <hr>
+{{else}}
+<p>Sorry No Post available</p>
+{{/each}}
+</div>
+{{yield}}

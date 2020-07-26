@@ -1,0 +1,14 @@
+<div class="comp1">
+    <Comp-No1 @available={{model.user}}/>
+</div>
+<div class="c2" style="
+  flex: 9;
+  display: flex;
+  flex-direction:column;
+  float: left; 
+  height:500px;
+  width: 85%;">
+  <Comp-No2 @model={{model.posts}} />
+  
+</div>
+{{outlet}}

@@ -1,0 +1,23 @@
+<h3>Send Request To:</h3>
+<div class="textbox" style="width:35%">
+    <Input type="text" id="name" @value={{uname}} placeholder="Enter Users name to give request "/>
+</div>
+<button class="lobtn" style="width: 10%;"{{action 'request'}} disabled={{isdisabled}}>Request</button> 
+<hr><br>
+<h3>Friend Request From: </h3>
+{{#each model.requests as |req|}}
+    {{req}} 
+    <button class="lobtn" id="accept" style="width: 10%;" type="button" {{action 'accept' req}} >Accept</button>
+    <button class="lobtn" id="reject" style="width: 10%; background: red;" type="button" {{action 'cancel' req}} >cancel</button>
+    <br>
+{{else}}
+    No one
+{{/each}}
+<hr><br>
+<h3>Friend List: </h3>
+{{#each model.friends as |friend|}}
+    <li>{{friend}}</li>
+{{else}}
+    No friend request
+{{/each}}
+{{outlet}}

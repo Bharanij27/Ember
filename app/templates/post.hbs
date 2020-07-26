@@ -1,0 +1,26 @@
+<center><h1><em>{{model.title}}</em></h1></center><hr>
+<div>
+  <div class="content">
+      {{model.content}}<br> 
+</div>
+  Shared To: {{model.shared}}
+
+  <div class="textbox" style="width:35%">
+        <Input type="text" id="shared" @value={{ulist}} placeholder="Enter User/Group name or Feeds"/>
+    </div>
+  <button class="lobtn" style="width: 10%;"{{action 'share'}} disabled={{isdisabled}}>Share To</button> 
+  Comments:<br>
+  <hr>
+    {{#each model.comment as |list| }}
+        {{list.body}}
+        <hr> 
+    {{else}}
+        Be First to Comment
+    {{/each}}  
+    <div class="textbox">
+        Add Comment<br>
+        {{textarea value = content cols = "40" rows = "10" placeholder="Your comment goes here..." }}
+        <button type="submit" {{action "addcom"}} disabled={{isok}}>Save</button>
+    </div>
+</div>
+{{outlet}}
